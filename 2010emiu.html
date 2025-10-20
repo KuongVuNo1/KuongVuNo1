@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng 20/10 - Bùi Hồng Khanh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffb3c6 50%, #ffc9d9 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 30px;
+            animation: float 8s infinite ease-in-out;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        .flower:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .flower:nth-child(2) { left: 85%; top: 30%; animation-delay: 2s; }
+        .flower:nth-child(3) { left: 15%; top: 70%; animation-delay: 4s; }
+        .flower:nth-child(4) { left: 80%; top: 65%; animation-delay: 1s; }
+        .flower:nth-child(5) { left: 50%; top: 10%; animation-delay: 3s; }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            max-width: 650px;
+            width: 100%;
+            animation: fadeIn 1s ease-in;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart {
+            font-size: 60px;
+            color: #ff69b4;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.2);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff1493;
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: normal;
+            text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.3);
+        }
+
+        .recipient-name {
+            font-family: 'Dancing Script', cursive;
+            color: #ff69b4;
+            font-size: 38px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .date {
+            font-family: 'Quicksand', sans-serif;
+            color: #ff69b4;
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .english-quote {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe4e9 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #ff69b4;
+            font-size: 19px;
+            color: #444;
+            line-height: 1.8;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #ffe4e9 0%, #ffd1dc 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #ff69b4;
+            font-style: italic;
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+        }
+
+        .from {
+            font-family: 'Dancing Script', cursive;
+            text-align: right;
+            color: #ff1493;
+            font-size: 26px;
+            margin-top: 20px;
+            font-weight: 700;
+        }
+
+        .flowers-decoration {
+            font-size: 40px;
+            margin: 20px 0;
+            letter-spacing: 10px;
+        }
+
+        .btn {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+        }
+
+        .sparkle {
+            display: inline-block;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        #extraMessage {
+            font-family: 'Quicksand', sans-serif;
+            margin-top: 30px;
+            display: none;
+            color: #ff1493;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            .recipient-name {
+                font-size: 30px;
+            }
+
+            .english-quote, .quote {
+                font-size: 16px;
+            }
+
+            .from {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flower">🌸</div>
+    <div class="flower">🌺</div>
+    <div class="flower">🌷</div>
+    <div class="flower">🌹</div>
+    <div class="flower">💐</div>
+
+    <div class="container">
+        <div class="heart">💖</div>
+        <h1>Chúc Mừng 20/10</h1>
+        <div class="recipient-name">Bùi Hồng Khanh</div>
+        <div class="date">Ngày Phụ Nữ Việt Nam</div>
+        
+        <div class="flowers-decoration">
+            <span class="sparkle">🌸</span>
+            <span class="sparkle">🌺</span>
+            <span class="sparkle">🌸</span>
+        </div>
+
+        <div class="english-quote">
+            "You're wonderful, outstanding, marvelous, adorable, and nice; you're a woman. Happy Women's Day."
+        </div>
+
+        <div class="quote">
+            "Phụ nữ là những bông hoa, làm đẹp cho cuộc sống này.<br>
+            Hãy luôn tự hào về chính mình!"
+        </div>
+
+        <div class="flowers-decoration">
+            <span class="sparkle">💐</span>
+            <span class="sparkle">🌷</span>
+            <span class="sparkle">💐</span>
+        </div>
+
+        <button class="btn" onclick="showMessage()">Gửi Lời Chúc 💝</button>
+
+        <div id="extraMessage">
+            🌟 Chúc iiiiem iu luôn xinh đẹp và rạng rỡ! 🌟
+        </div>
+
+        <div class="from">~ Khầy V. Kường ~</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const msg = document.getElementById('extraMessage');
+            msg.style.display = 'block';
+            msg.style.animation = 'fadeIn 1s ease-in';
+            
+            // Create confetti effect
+            for (let i = 0; i < 20; i++) {
+                createConfetti();
+            }
+        }
+
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.textContent = ['🌸', '💖', '🌺', '✨', '💝'][Math.floor(Math.random() * 5)];
+            confetti.style.position = 'fixed';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-50px';
+            confetti.style.fontSize = '30px';
+            confetti.style.animation = 'fall 3s linear';
+            confetti.style.zIndex = '1000';
+            document.body.appendChild(confetti);
+
+            setTimeout(() => confetti.remove(), 3000);
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
